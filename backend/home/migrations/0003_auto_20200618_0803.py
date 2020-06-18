@@ -9,31 +9,62 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0002_load_initial_data'),
+        ("home", "0002_load_initial_data"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customtext',
-            name='ftghryuj5y',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='customtext_ftghryuj5y', to=settings.AUTH_USER_MODEL),
+            model_name="customtext",
+            name="ftghryuj5y",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="customtext_ftghryuj5y",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='sfasdfasz',
-            field=models.ManyToManyField(blank=True, related_name='customtext_sfasdfasz', to='home.HomePage'),
+            model_name="customtext",
+            name="sfasdfasz",
+            field=models.ManyToManyField(
+                blank=True, related_name="customtext_sfasdfasz", to="home.HomePage"
+            ),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='werqwrf',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='homepage_werqwrf', to=settings.AUTH_USER_MODEL),
+            model_name="homepage",
+            name="werqwrf",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="homepage_werqwrf",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.CreateModel(
-            name='Ghvhggfgvcafvwse',
+            name="Ghvhggfgvcafvwse",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('adfvwftgbver', models.BigIntegerField()),
-                ('sdfaef', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='ghvhggfgvcafvwse_sdfaef', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("adfvwftgbver", models.BigIntegerField()),
+                (
+                    "sdfaef",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="ghvhggfgvcafvwse_sdfaef",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]
